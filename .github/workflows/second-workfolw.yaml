@@ -1,0 +1,13 @@
+name: second-workflow
+on:
+  push:
+    branches:
+      - "main"
+jobs:
+  second-workflow-job:
+    name: 2nd-job
+    runs-on: ubuntu:lts
+    steps:
+     - name: run shell command
+       run: echo "second workflow"
+       
