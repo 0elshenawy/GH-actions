@@ -6,7 +6,7 @@ on:
 jobs:
   second-workflow-job:
     name: 2nd-job
-    runs-on: ubuntu:lts
+    runs-on: ubuntu-latest
     steps:
      - name: run shell command
        run: echo "second workflow"
