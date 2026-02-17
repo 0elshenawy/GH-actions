@@ -1,0 +1,23 @@
+name: 4-workflow
+on:
+  push:
+    branches:
+      - "main"
+  fork:
+jobs:
+  first-job:
+   name: 4-job
+   runs-on: ubuntu-latest
+
+   steps:
+     - name: checkout step
+       uses: actions/checkout@v4
+
+     - name: Debug Everything
+       run: |
+              echo "Current directory:"
+              pwd
+              echo "Root files:"
+              ls -a
+              echo "Workflows folder:"
+              ls -a .github/workflows
