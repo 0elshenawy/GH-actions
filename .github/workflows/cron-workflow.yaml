@@ -9,3 +9,10 @@ jobs:
    runs-on: ubuntu-latest
    steps:
     - run: echo "schedule workflow"
+
+    - name: debug
+      run: |
+       echo "Current directory:"
+       pwd
+       echo "UTC Time:"
+       date
