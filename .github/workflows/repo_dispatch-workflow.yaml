@@ -1,0 +1,25 @@
+name: repo-dispatch-workflow
+on:
+  repository_dispatch:
+   types: [test]
+  push:
+    branches:
+      - "main"
+  pull_request:
+    branches:
+      - "feature"
+    types: [opened,closed]
+
+jobs:
+  postman-REPOdispatch-workflow:
+    name: postman job 
+    runs-on: ubuntu-latest
+    steps:
+     - name: before checkout action
+       run: ls -a 
+       shell: bash 
+     - name: checkout steps
+       uses: actions/checkout@v4
+     - name: after checkout action
+       run: ls -a 
+       shell: bash
