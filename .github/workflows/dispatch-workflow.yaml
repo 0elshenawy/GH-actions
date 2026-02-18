@@ -1,0 +1,20 @@
+name: dispatch-workflow
+on:
+  workflow_dispatch:
+    inputs:
+      versionName:
+        required: true
+        description: "this is version name for github workflow "
+jobs:
+  dispatch-workflow:
+    name: dispatch workflow job 
+    runs-on: ubuntu-latest
+    steps:
+     - name: before checkout action
+       run: ls -a 
+       shell: bash 
+     - name: checkout steps
+       uses: actions/checkout@v4
+     - name: after checkout action
+       run: ls -a 
+       shell: bash
