@@ -10,7 +10,6 @@ jobs:
        if: github.ref == 'refs/heads/main'
        run: |
          pwd
-         cd .github/workflows
          ls -a 
          echo ${{ github.ref }}
        shell: bash
