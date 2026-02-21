@@ -1,0 +1,16 @@
+name: job in container workflow
+on:
+    push:
+        branches:
+            - "main"
+            
+jobs:
+    container-workflow:
+        name: container job
+        runs-on: ubuntu-latest
+        container: 
+            image: node:14.16
+        steps:
+            - name: node version
+              run: node -v 
+              shell: bash           
