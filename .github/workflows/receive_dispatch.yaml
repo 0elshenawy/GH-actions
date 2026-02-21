@@ -2,7 +2,7 @@ name: receive_dispatch
 
 on:
   repository_dispatch:
-    types: [testing]
+    types: [test]
 
 jobs:
   receive:
