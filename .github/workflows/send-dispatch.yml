@@ -14,5 +14,5 @@ jobs:
         with:
           token: ${{ secrets.PAT_TOKEN }}
           repository: 0elshenawy/GH-ACTIONS
-          event-type: test
+          event-type: testing
           client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}' 
