@@ -1,4 +1,4 @@
-name: repo_dispatch_workflow
+name: send-dispatch
 
 on:
   push:
@@ -12,7 +12,7 @@ jobs:
       - name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT_TOKEN }}
           repository: 0elshenawy/GH-ACTIONS
           event-type: test
           client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'

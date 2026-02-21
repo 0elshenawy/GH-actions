@@ -12,3 +12,11 @@ jobs:
         run: |
           echo "Ref: ${{ github.event.client_payload.ref }}"
           echo "SHA: ${{ github.event.client_payload.sha }}"
+      - name: before checkout action
+        run: ls -a 
+        shell: bash 
+      - name: checkout steps
+        uses: actions/checkout@v4
+      - name: after checkout action
+        run: ls -a 
+        shell: bash
