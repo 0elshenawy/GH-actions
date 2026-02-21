@@ -1,0 +1,26 @@
+name: condition workflow
+on:
+  push:
+jobs:
+  condition-workflow:
+    name: condition workflow
+    runs-on: ubuntu-latest
+    steps:
+     - name: before checkout action
+       if: github.ref == 'refs/heads/main'
+       run: |
+         pwd
+         cd .github/workflows
+         ls -a 
+         echo ${{ github.ref }}
+       shell: bash
+     - name: checkout action
+       uses: actions/checkout@v4
+
+     - name: after checkout action
+       run: |
+            pwd
+            cd .github/workflows
+            ls -a 
+            echo ${{ github.ref }}
+       shell: bash
